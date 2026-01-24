@@ -11,9 +11,9 @@ import 'package:synchronized/synchronized.dart';
 /// Reference: https://learn.microsoft.com/en-us/windows/win32/fileio/maximum-file-path-limitation?tabs=registry
 const String kWindowsStoragePathPrefix = '\\\\?\\';
 
-/// Network storage path have a \\ prefix on Windows.
+/// Network storage path have a \ prefix on Windows.
 /// For these paths, \\?\ prefix does not work correctly.
-const String kWindowsNetworkPathPrefix = '\\\\';
+const String kWindowsNetworkPathPrefix = '\\';
 
 String kPathSeparator = Platform.isWindows ? '\\' : '/';
 
