@@ -439,6 +439,8 @@ extension FileSystemEntityExtension on FileSystemEntity {
         }
         await directory.delete(recursive: true);
       }
+    } on PathNotFoundException catch (_) {
+      // -- ignore
     } catch (exception, stacktrace) {
       print(exception.toString());
       print(stacktrace.toString());
