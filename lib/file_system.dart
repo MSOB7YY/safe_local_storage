@@ -276,9 +276,8 @@ extension FileExtension on File {
         print(stacktrace.toString());
       }
       await File(addPrefix(path)).rename(addPrefix(destination));
-    } catch (exception, stacktrace) {
-      print(exception.toString());
-      print(stacktrace.toString());
+    } catch (_) {
+      rethrow;
     }
   }
 
