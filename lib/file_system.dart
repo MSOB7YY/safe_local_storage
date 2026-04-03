@@ -223,9 +223,8 @@ extension FileExtension on File {
           );
         }
         await File(src).rename_(dst);
-      } catch (exception, stacktrace) {
-        print(exception.toString());
-        print(stacktrace.toString());
+      } catch (_) {
+        rethrow;
       }
     });
   }
